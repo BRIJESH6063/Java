@@ -1,0 +1,213 @@
+/*
+
+Access Modifier: Defines the access type of the method i.e. from where it can be accessed in your application. In Java, there are 4 types of access specifiers:
+1. public: Accessible in all classes in your application.
+2. protected: Accessible within the package in which it is defined and in its subclass(es) (including subclasses declared outside the package).
+3. private: Accessible only within the class in which it is defined.
+4. default (declared/defined without using any modifier): Accessible within the same class and package within which its class is defined.
+The return type: The data type of the value returned by the method or void if it does not return a value.
+Method Name: The rules for field names apply to method names as well, but the convention is a little different.
+Parameter list: Comma-separated list of the input parameters that are defined, preceded by their data type, within the enclosed parentheses. If there are no parameters, you must use empty parentheses ().
+Exception list: The exceptions you expect the method to throw. You can specify these exception(s).
+Method body: It is the block of code, enclosed between braces, that you need to execute to perform your intended operations.
+
+
+1: Abstraction
+Data Abstraction is the property by virtue of which only the essential details are displayed to the user. The trivial or non-essential units are not displayed to the user. Ex: A car is viewed as a car rather than its individual components.
+Data Abstraction may also be defined as the process of identifying only the required characteristics of an object, ignoring the irrelevant details. The properties and behaviors of an object differentiate it from other objects of similar type and also help in classifying/grouping the object.
+
+2: Encapsulation
+It is defined as the wrapping up of data under a single unit. It is the mechanism that binds together the code and the data it manipulates. Another way to think about encapsulation is that it is a protective shield that prevents the data from being accessed by the code outside this shield.
+
+Technically, in encapsulation, the variables or the data in a class is hidden from any other class and can be accessed only through any member function of the class in which they are declared.
+In encapsulation, the data in a class is hidden from other classes, which is similar to what data-hiding does. So, the terms “encapsulation” and “data-hiding” are used interchangeably.
+Encapsulation can be achieved by declaring all the variables in a class as private and writing public methods in the class to set and get the values of the variables.
+
+3: Inheritance
+Inheritance is an important pillar of OOP (Object-Oriented Programming). It is the mechanism in Java by which one class is allowed to inherit the features (fields and methods) of another class. We are achieving inheritance by using extends keyword. Inheritance is also known as “is-a” relationship.
+
+Let us discuss some frequently used important terminologies:
+
+Superclass: The class whose features are inherited is known as superclass (also known as base or parent class).
+Subclass: The class that inherits the other class is known as subclass (also known as derived or extended or child class). The subclass can add its own fields and methods in addition to the superclass fields and methods.
+Reusability: Inheritance supports the concept of “reusability”, i.e. when we want to create a new class and there is already a class that includes some of the code that we want, we can derive our new class from the existing class. By doing this, we are reusing the fields and methods of the existing class.
+
+3: Inheritance
+Inheritance is an important pillar of OOP (Object-Oriented Programming). It is the mechanism in Java by which one class is allowed to inherit the features (fields and methods) of another class. We are achieving inheritance by using extends keyword. Inheritance is also known as “is-a” relationship.
+
+Let us discuss some frequently used important terminologies:
+
+Superclass: The class whose features are inherited is known as superclass (also known as base or parent class).
+Subclass: The class that inherits the other class is known as subclass (also known as derived or extended or child class). The subclass can add its own fields and methods in addition to the superclass fields and methods.
+Reusability: Inheritance supports the concept of “reusability”, i.e. when we want to create a new class and there is already a class that includes some of the code that we want, we can derive our new class from the existing class. By doing this, we are reusing the fields and methods of the existing class.
+
+QUESTION : What are the main principles of OOPs in Java?
+The main principles of OOPs in Java are encapsulation, inheritance, polymorphism, and abstraction. Encapsulation ensures that the internal state of an object is hidden and can only be accessed through public methods. Inheritance allows one class to inherit properties and behavior from another. Polymorphism enables objects to be treated as instances of their parent class. Abstraction focuses on hiding the implementation details and showing only the necessary information to the outside world.
+
+QUESTION: How is OOPs implemented in Java?
+In Java, OOPs is implemented through classes and objects. A class serves as a blueprint for creating objects, which are instances of that class. Each object has its own set of attributes (variables) and methods (functions). By following OOPs concepts like encapsulation, inheritance, polymorphism, and abstraction, Java developers can design well-structured and maintainable code.
+
+##. Properties of Java Classes
+Class is not a real-world entity. It is just a template or blueprint or prototype from which objects are created.
+Class does not occupy memory.
+Class is a group of variables of different data types and a group of methods.
+A Class in Java can contain:
+Data member
+Method
+Constructor
+Nested Class
+Interface
+
+Initializing a Java object
+The new operator instantiates a class by allocating memory for a new object and returning a reference to that memory. The new operator also invokes the class constructor.
+
+[
+Note: All classes have at least one constructor. If a class does not explicitly declare any, the Java compiler automatically provides a no-argument constructor, also called the default constructor. This default constructor calls the class parent’s no-argument constructor (as it contains only one statement i.e super();), or the Object class constructor if the class has no other parent (as the Object class is the parent of all classes either directly or indirectly).
+]
+
+
+Ways to Create an Object of a Class
+There are four ways to create objects in Java. Strictly speaking, there is only one way(by using a new keyword), and the rest internally use a new keyword.
+
+1. Using new keyword
+It is the most common and general way to create an object in Java.
+// creating object of class Test
+Test t = new Test();
+
+2. Using Class.forName(String className) method
+There is a pre-defined class in java.lang package with name Class. The forName(String className) method returns the Class object associated with the class with the given string name. We have to give a fully qualified name for a class. On calling the new Instance() method on this Class object returns a new instance of the class with the given string name.
+// creating object of public class Test
+// consider class Test present in com.p1 package
+Test obj = (Test)Class.forName("com.p1.Test").newInstance();
+
+ Using clone() method
+clone() method is present in the Object class. It creates and returns a copy of the object.
+
+// creating object of class Test
+Test t1 = new Test();
+// creating clone of above object
+Test t2 = (Test)t1.clone();
+4. Deserialization
+De-serialization is a technique of reading an object from the saved state in a file. Refer to Serialization/De-Serialization in Java
+
+FileInputStream file = new FileInputStream(filename);
+ObjectInputStream in = new ObjectInputStream(file);
+Object obj = in.readObject();
+
+JAVA METHODS..
+Ways to Create Method in Java
+There are two ways to create a method in Java:
+
+1. Instance Method: Access the instance data using the object name. Declared inside a class.
+
+Syntax:
+
+// Instance Method
+void method_name(){
+  body // instance area
+}
+2. Static Method: Access the static data using class name. Declared inside class with static keyword.
+
+Syntax:
+
+//Static Method
+static void method_name(){
+  body // static area
+}
+
+PRIVATE:   for variables that should only be accessible within the class: If you want to prevent access to a variable from outside the class, use the private access modifier. This is the most restrictive access modifier and provides the greatest level of encapsulation.
+PROTECTED: for variables that should be accessible within the class and its subclasses: If you want to allow access to a variable from within the class and its subclasses, use the protected access modifier. This is less restrictive than private and provides some level of inheritance.
+PUBLIC:    for variables that should be accessible from anywhere: If you want to allow access to a variable from anywhere, use the public access modifier. This is the least restrictive access modifier and provides the least amount of encapsulation.
+Use accessor and mutator methods to manage access to the variables: In order to access and modify the variables, use accessor (getter) and mutator (setter) methods, even if the variables have a public access modifier. This provides a level of abstraction and makes your code more maintainable and testable.
+
+QUESTION: What are Constructors in Java?
+In Java, a Constructor is a block of codes similar to the method. It is called when an instance of the class is created. At the time of calling the constructor, memory for the object is allocated in the memory. It is a special type of method that is used to initialize the object. Every time an object is created using the new() keyword, at least one constructor is called.
+
+Note: It is not necessary to write a constructor for a class. It is because the java compiler creates a default constructor (constructor with no arguments) if your class doesn’t have any.
+
+QUESTION: How Java Constructors are Different From Java Methods?
+Constructors must have the same name as the class within which it is defined it is not necessary for the method in Java.
+Constructors do not return any type while method(s) have the return type or void if does not return any value.
+Constructors are called only once at the time of Object creation while method(s) can be called any number of times.
+
+When Java Constructor is called?
+Each time an object is created using a new() keyword, at least one constructor (it could be the default constructor) is invoked to assign initial values to the data members of the same class. Rules for writing constructors are as follows:
+
+The constructor(s) of a class must have the same name as the class name in which it resides.
+A constructor in Java can not be abstract, final, static, or Synchronized.
+Access modifiers can be used in constructor declaration to control its access i.e which other class can call the constructor.
+
+Types of Constructors in Java
+Now is the correct time to discuss the types of the constructor, so primarily there are three types of constructors in Java are mentioned below:
+1. Default Constructor
+2. Parameterized Constructor
+3. Copy Constructor
+
+1. Default Constructor in Java
+A constructor that has no parameters is
+known as default the constructor. A default constructor is invisible. And if we write a constructor with no arguments, the compiler does not create a default constructor. It is taken out. It is being overloaded and called a parameterized constructor. The default constructor changed into the parameterized constructor. But Parameterized constructor can’t change the default constructor. The default constructor can be implicit or explicit. If we don’t define explicitly, we get an implicit default constructor. If we manually write a constructor, the implicit one is overridded.
+
+IMPORTANT ::
+Remember: Does constructor return any value?
+There are no “return value” statements in the constructor, but the constructor returns the current class instance. We can write ‘return’ inside a constructor.
+
+Copy Constructor in Java ::
+Unlike other constructors copy constructor is passed with another object which copies the data available from the passed object to the newly created object.
+Note: In Java,there is no such inbuilt copy constructor available like in other programming languages such as C++, instead we can create our own copy constructor by passing the object of the same class to the other instance(object) of the class.
+
+
+Four Main Object-Oriented Programming Concepts of Java
+Object-oriented programming generally referred to as OOPS is the backbone of java as java is not a purely object-oriented language but it is object oriented language. Java organizes a program around the various objects and well-defined interfaces. There are four pillars been here in OOPS which are listed below. These concepts aim to implement real-world entities in programs.
+1. Abstraction
+2. Encapsulation
+3. Inheritance
+4. Polymorphism
+
+
+### Encapsulation :: is the process of wrapping code and data together into a single unit.
+
+Real-Life Example:
+In order to achieve encapsulation in java follow certain steps as proposed below:
+1. Declare the variables as private
+2. Declare the setters and getters to set and get the variable values
+Note: There are few advantages of encapsulation in java as follows:
+1. Control Over Data: We can write the logic in the setter method to not store the negative values for an Integer. So by this way we can control the data.
+2. Data Hiding: The data members are private so other class can’t access the data members.
+3. Easy to test: Unit testing is easy for encapsulated classes
+
+### Inheritance..
+Inheritance is the process of one class inheriting properties and methods from another class in Java. Inheritance is used when we have is-a relationship between objects.  Inheritance in Java is implemented using extends keyword.
+
+There are 5 different types of inheritance in java as follows:
+1. Single Inheritance:     Class B inherits Class A using extends keyword
+2. Multilevel Inheritance: Class C inherits class B and B inherits class A using extends keyword
+3. Hierarchy Inheritance:  Class B and C inherits class A in hierarchy order using extends keyword
+4. Multiple Inheritance:   Class C inherits Class A and B. Here A and B both are superclass and C is only one child class. Java is not supporting Multiple Inheritance, but we can implement using Interfaces.
+5. Hybrid Inheritance:     Class D inherits class B and class C. Class B and C inherits A. Here same again Class D inherits two superclass, so Java is not supporting Hybrid Inheritance as well.
+
+
+Polymorphism :: is the ability to perform many things in many ways. The word Polymorphism is from two different Greek words- poly and morphs. “Poly” means many, and “Morphs” means forms. So polymorphism means many forms. The polymorphism can be present in the case of inheritance also. The functions behave differently based on the actual implementation.
+There are two types of polymorphism as listed below:
+1. Static or Compile-time Polymorphism
+2. Dynamic or Run-time Polymorphism
+Static or Compile-time Polymorphism when the compiler is able to determine the actual function, it’s called compile-time polymorphism. Compile-time polymorphism can be achieved by method overloading in java. When different functions in a class have the same name but different signatures, it’s called method overloading. A method signature contains the name and method arguments. So, overloaded methods have different arguments. The arguments might differ in the numbers or the type of arguments.
+
+
+
+
+
+
+### Abstraction ###
+Abstraction is a process of hiding implementation details and exposing only the functionality to the user. In abstraction, we deal with ideas and not events. This means the user will only know “what it does” rather than “how it does”.
+
+There are two ways to achieve abstraction in Java:
+1. Abstract class (0 to 100%)
+2. Interface (100%)
+
+
+### Certain key points should be remembered regarding this pillar of OOPS as follows:
+1. The class should be abstract if a class has one or many abstract methods
+2. An abstract class can have constructors, concrete methods, static method, and final method
+3. Abstract class can’t be instantiated directly with the new operator.
+
+

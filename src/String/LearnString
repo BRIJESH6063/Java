@@ -1,0 +1,12 @@
+Creating a String
+There are two ways to create string in Java:
+1. String literal
+   String s = “GeeksforGeeks”;
+2. Using new keyword
+   String s = new String (“GeeksforGeeks”);
+
+1. String(byte[] byte_arr)
+Construct a new String by decoding the byte array. It uses the platform’s default character set for decoding.
+Example:
+byte[] b_arr = {71, 101, 101, 107, 115};
+String s_byte =new String(b_arr); //Geeks

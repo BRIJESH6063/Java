@@ -1,0 +1,152 @@
+Java Collections Framework --
+provide set of interfaces and classes to implement various data structures and algorithms.
+These interface include several methods to perform different operations on collections.
+
+Collection --> List
+               Set   <------ SortedSet
+               Queue <------ Dequeue
+
+Iterator <---------- ListIterator
+Map      <---------- SortedMap
+
+Java List Interface --
+The List Interface extends the Collection Interface and adds methods that are specific to lists, which are
+ordered collection that allow duplicate elements.
+Here are some of the methods that are present in list Interface but not in Collection Interface.
+
+LIST INTERFACE ---- .
+1. ArrayList
+2. LinkedList
+3. Stack
+4. Vector
+
+
+ARRAYLIST --
+List<Integer> list = new ArrayList<>() ;
+list.add(23) ;
+list.add(47) ;
+list.add(58) ;
+list.add(65) ;
+
+
+JAVA VECTOR --
+Vector class synchronizes each and every operation.
+It automatically put lock on operation in order to prevent race condition.
+ConcurrentModificationError generated...
+List<Integer> list = new Vector<>() ;
+list.add(23) ;
+list.add(47) ;
+list.add(58) ;
+list.add(65) ;
+
+JAVA STACK --
+Stack<String> st = new Stack<>() ;
+st.push("A") ;
+st.push("B") ;
+st.push("C") ;
+st.push("D") ;
+st.push("E") ;
+
+System.out.println(st);
+System.out.println(st.peek());
+
+while(! st.empty()) {
+    System.out.println(st.peek());
+    st.pop() ;
+}
+
+
+JAVA QUEUE INTERFACE...
+Queue<Integer> q = new LinkedList<>() ;
+q.offer(10) ;
+q.offer(20) ;
+q.offer(30) ;
+q.offer(40) ;
+
+JAVA SET INTERFACE ---
+of java collection framework provide the feature of mathematical set in java.
+
+Set is implemented by --
+1. EnumSet
+2. HashSet
+3. LinkedHashSet
+4. TreeSet
+
+
+
+Map is Implemented by ---
+1. HashMap
+2. TreeMap
+3. EnumMap
+4. LinkedHashMap
+5. WeakHashMap
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

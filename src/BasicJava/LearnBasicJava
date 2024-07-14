@@ -1,0 +1,726 @@
+class naming -- JavaClass$ correct work
+                other special character doesn't work
+rules --> strictly to be followed
+convention --> no error given, just followed by good programmers
+
+Rules of Identifiers -- rules are common for each and every identifiers in java, if we don't follow
+An identifiers can include
+1. uppercase + lowercase alphabet + 0-9 + special symbol (only _, $)
+_task$ --> valid
+2. Identifier must not begin with numbers
+3. spacing not allowed for identifiers
+4. An identifier must not contain any keyword [ class int ] --> fucking wrong
+all keywords are in small letters and java is case sensitive lang
+class Void ---> works not class void
+
+Conventions ==> are standard way to write the identifiers
+conventions are different for every identifiers
+convention for class name -->
+1. if class may contain single word then first letter should start with capital and rest of letters in small
+2. if a class name contain multiple words then first letter of each word should be capital and rest of the letters in small
+JavaProgram
+Task
+FindOutPrimeNumbers
+
+Conventions for variable name -->
+1. if variable name has single word then it should be written in small letters
+2. if variable name has multiple words then first word should be small rest all words should begin with capital letter
+student
+nameOfEmployee
+employeeId
+
+conventions for Methods name -->
+1. conventions for methods are exactly same as variable name but method always comes with parenthesis
+isPrimeNumber()
+[
+    class JavaProgram {
+        public static void main(String[] args) {
+            System.out.println(101)
+            // System --> class
+            // out --> variable
+            // println() --> method
+            // 101 --> data | literals
+        }
+    }
+]
+
+## Literals
+Literals are the necessary info or data needed by a programmer to write set of instructions or to perform any task
+Literals can be of two types --
+1. SingleValued literals  [Primitive values]
+    [Numeric [Decimal(float, double), Non-Decimal](byte short int long), Character, Boolean[true, false]]
+2. MultiValued  Literals  [Non Primitive Value]
+    [String(Datatype in Java), each and every object in java]
+
+age = 24 --> compile time error, fine with javascript not with java
+Static Programming Language(Java) ask 2 question
+1. what kind of data is there?
+2. what will be the size ?
+
+Container --> Variable
+
+
+### Data Types
+Data type is concept of java that categorized different kind of literals over data on the basis of their type and size
+we have two types of data type --
+1. Primitive Data Type
+2. Non Primitive Data Type
+
+PRIMITIVE DATATYPE
+prim. dt are used to represent single value literals or primitive values
+these are pre defined and present in form of keywords
+for eg.. Byte Short Int Long Float Double Char Boolean
+
+Name: "Amit" --> String
+Age: 24 (options: )
+
+datatype and their range
+System.out.println(Integer.MAX_VALUE);
+System.out.println(Float.MAX_VALUE);
+System.out.println(Double.MAX_VALUE);
+System.out.println(Long.MAX_VALUE);
+System.out.println(Byte.MAX_VALUE);
+System.out.println(Short.MAX_VALUE);
+OUTPUT ------
+2147483647
+3.4028235E38
+1.7976931348623157E308
+9223372036854775807
+127
+32767
+
+System.out.println(10/3);
+System.out.println(10.0/3);
+System.out.println(10/3.0);
+System.out.println(10.0/3.0);
+System.out.println(10.0f/3);
+System.out.println(10/3.0f);
+System.out.println(10.0f/3.0f);
+---------------
+3
+3.3333333333333335
+3.3333333333333335
+3.3333333333333335
+3.3333333
+3.3333333
+3.3333333
+
+
+System.out.println(9936193424L);
+System.out.println(12312.32F) ;
+
+int num = (int)9936193424L ;
+System.out.println(num);
+
+
+Variables ---
+is a container that can store any kind of value of input
+
+Declaration + Initialisation
+int age ;
+age = 213 ;
+
+System.out.println(1.0+2+3+"2.0"+1.0);
+1.0+2+3 = 6.0 + "2.0" + 1.0
+6.02.01.0
+double + float == double
+
+float x = 2.3 + 1.0f +2 ; WRONG
+double since 2.3 is double
+
+### Non Primitive DataTypes
+Non Primitive DataTypes are used to represent Multi Value literals | Object
+NP datatype can be predefined or user defined because each and every class in java programming lang is non-primitive data type
+
+examples of predefined Classes --
+String
+Arraylist
+Vector
+Stack
+Hashmap
+TreeMap
+TreeSet
+
+
+Note ---
+Non primitive datatype size is not fixed or not defined.
+
+## QUES.. WAJP to store 5 subject marks in different containers and find percentage.
+
+
+### TYPE CASTING --
+The process of converting one type of data into another type of datatype is known as type casting
+Possible conversions --
+Primitive DT  ---------> Primitive DT
+Non Primitive ---------> Primitive DT
+Non Primitive ---------> Non Primitive DT
+
+
+1. Primitive typeCasting -- (primitive - primitive)
+process of converting one P.DT into another P.DT is known as PTC
+A. IMPLICIT TYPECASTING -- ( widening )
+   type casting done by compiler implicitly
+B. EXPLICIT TYPECASTING --
+   [ narrowing : process of converting large PD into small PD, possible chances of data loss ]
+   hence, compiler will not do it implicitly. Manually(Explicitly), type cast operator can be used.
+   done forcefully by the programmer
+
+
+2. Non Primitive typeCasting -- (N. primitive - N. primitive)
+A. IMPLICIT TYPECASTING -- ( UpperCasting )
+   type casting done by compiler implicitly
+   byte x = 23 ;
+   int y = x ; // No Error
+B. EXPLICIT TYPECASTING -- ( DownCasting )
+   done forcefully by the programmer
+   int x = 23 ;
+   byte y = x ; // Error
+   byte y = (int) x ; // No Error
+
+
+3. Wrapper Classes -- ( Collection FrameWork )
+A. Auto Boxing ( Implicit )
+   The automatic conversion of primitive types to the object of their corresponding wrapper classes is known as
+   autoboxing. For example – conversion of int to Integer, long to Long, double to Double, etc.
+
+    char ch = 'a';
+    // Autoboxing- primitive to Character object conversion
+    Character a = ch ;
+
+    ArrayList<Integer> arrayList = new ArrayList<Integer>();
+    // Autoboxing because ArrayList stores only objects
+
+    arrayList.add(25) ;
+
+
+B. Auto UnBoxing ( Explicit )
+   It is just the reverse process of autoboxing. Automatically converting an object of a wrapper class to its
+   corresponding primitive type is known as unboxing. For example – conversion of Integer to int, Long to long,
+   Double to double, etc.
+
+    Character ch = 'a';
+    // unboxing - Character object to primitive conversion
+    char a = ch;
+
+    ArrayList<Integer> arrayList = new ArrayList<Integer>();
+    arrayList.add(24);
+    // unboxing because get method returns an Integer object
+    int num = arrayList.get(0);
+
+
+NOTES ----
+A Wrapper class in Java is a class whose object wraps or contains primitive data types.
+When we create an object to a wrapper class, it contains a field and in this field, we can store primitive data types.
+In other words, we can wrap a primitive value into a wrapper class object.
+
+Need of Wrapper Classes ---
+1. They convert primitive data types into objects. Objects are needed if we wish to modify the arguments passed into
+   a method (because primitive types are passed by value).
+2. The classes in java.util package handles only objects and hence wrapper classes help in this case also.
+3. Data structures in the Collection framework, such as ArrayList and Vector, store only objects (reference types)
+   and not primitive types.
+4. An object is needed to support synchronization in multithreading.
+
+
+Advantages of Wrapper Classes -----
+1. Collections allowed only object data.
+2. On object data we can call multiple methods compareTo(), equals(), toString()
+3. Cloning process only objects
+4. Object data allowed null values.
+5. Serialization can allow only object data.
+
+Primitive Data Type             Wrapper Class
+char                            Character
+byte                            Byte
+short                           Short
+int                             Integer
+long                            Long
+float                           Float
+double                          Double
+boolean                         Boolean
+
+System.out.println("Min   :   " + Byte.MIN_VALUE+"   -   Max :   " + Byte.MAX_VALUE);
+System.out.println("Min   :   " + Short.MIN_VALUE+"   -   Max :   " + Short.MAX_VALUE);
+System.out.println("Min   :   " + Integer.MIN_VALUE+"   -   Max :   " + Integer.MAX_VALUE);
+System.out.println("Min   :   " + Float.MIN_VALUE+"   -   Max :   " + Float.MAX_VALUE);
+System.out.println("Min   :   " + Long.MIN_VALUE+"   -   Max :   " + Long.MAX_VALUE);
+System.out.println("Min   :   " + Double.MIN_VALUE+"   -   Max :   " + Double.MAX_VALUE);
+
+
+NOTE ### --
+boolean cannot be converted to 0 and 1 
+
+float f ;
+long data = 12345678 ;
+f = data ; // implicit typecasting
+System.out.println("float : " + f + " data : "+ data );
+OUTPUT : float : 1.2345678E7 data : 12345678
+float = 1.2345678 * 10 ^ 7
+similar with double
+
+Long ---------> Float [ IMPLICIT typecasting ]
+
+ASCII --> American Standard code for information interchange.
+A: --> 65, Z: --> 90
+a: --> 97, z: --> 122
+0: --> 48, 9: --> 57
+
+
+CHAR datatype:
+In Java Programing language, char datatype is used to represent character literals, present within single code.
+char datatype size is 2 Byte (16 bit)
+possible values -- 65536 or (2 ^ 16)
+can use characters of multiple languages(like hindi, chinese etc.) not just english alphabets
+C/C++ support only 1 Byte ie. 256 possible characters and hence only support english characters.
+
+Java support ASCII and unicode to represent characters.
+ASCII --> represents only english character and provide unique integer value for each english character.
+
+System.out.println((int) ''); // error! must be any a character not empty
+ASCII -- 0 to 127
+for(int i=0; i<=127 ; i++) {
+    System.out.println((char) i);
+}
+--------------------------------
+☺
+☻
+♥
+♦
+♣
+♠
+
+
+
+
+
+♂
+♀
+
+♫
+☼
+►
+◄
+↕
+‼
+¶
+§
+▬
+↨
+↑
+↓
+→
+
+∟
+↔
+▲
+▼
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+:
+;
+<
+=
+>
+?
+@
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+[
+\
+]
+^
+_
+`
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+k
+l
+m
+n
+o
+p
+q
+r
+s
+t
+u
+v
+w
+x
+y
+z
+{
+|
+}
+~
+⌂
+
+
+UNICODE -- stands for universal character set
+unicode can represent 2 bytes of character in java, it includes a unique value to each and every character of languages present worldwide.
+
+System.out.println('\u2A61');
+System.out.println('\u2A62');
+System.out.println('\u2A63');
+⩡
+⩢
+⩣
+
+
+OPERATORS :: ------
+operators are the special symbols used to perform operations.
+every operators need operands(value) to perform operation. In java lang. operators are categorized on the basis of
+number of operands and type of the task.
+
+1. Arithmetic operators.
+are binary operators, need 2 operands to perform task. used to perform mathematical operations or calculation and works left to right.
+symbols +(add, concat), -(sub), *(mul), /(div), %(mod).
+
+concatenation -- joining any data with string.
+
+
+
+
+
+Logical AND --
+In Logical AND if first operand is false the controller will not check other, directly generate false.
+
+Logical OR --  (||)
+also a binary operator that means two boolean operand to perform any logical task
+In Logical operator if first operand is true then controller will not check the second operand and directly
+generates result as true.
+
+
+
+CONDITIONAL OPERATORS ---
+it is a ternary operator that means the 3 operands to perform any task.
+
+op1 ? op2 : op3
+op1 == true, control direct goes to op2
+else control direct goes to op3
+
+
+OBJECT ORIENTED PROGRAMMING ---
+CLASS ---
+
+class Test {
+    double a ;          // non-static member
+    static double b ;   // static member
+    public static void main(String []args) {
+
+    }
+}
+
+
+
+TYPES OF VARIABLE --
+1. Local Variable
+
+
+2. Global Variable
+    a. static variable
+    b. Non-static variable ( Instance variable )
+
+
+
+DYNAMIC READ ---
+A process of reading inputs or data from user by keyboard is known as dynamic read.
+In java we can take input with help of scanner class
+Scanner --> is a predefined class
+
+Folders in JAVA JDK--
+sub-folders --> package
+1. LANG
+2. IO
+3. UTIL
+4. SQL
+
+
+LANG --
+String class
+System class
+Math
+Object
+
+UTIL --
+ArrayList
+Scanner
+Handle
+
+
+PROJECT -- MAIN FOLDER
+sub-folder -- PACKAGE
+import classes ---
+
+import project.package.class
+import java.lang.String ;
+
+import java.util.scanner ;
+import java.util.* ;
+
+self imported by compiler --
+lang (only default package in java)
+
+Package -- sub-folder that contains similar classes
+
+
+Scanner is a predefined class present in java.util package,
+in order to use class we must import scanner in program file
+syntax is --       Scanner sc = new Scanner(System.in) ;
+Scanner class has non static methods to read inputs of particular datatype
+
+
+Data Types Vs Methods
+DataTypes -- byte short long int
+methods   -- nextByte() nextShort() nextInt() nextDouble() nextLong() nextFloat() nextBoolean()
+
+String  ---> next()
+        ---> nextLine()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

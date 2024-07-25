@@ -536,47 +536,111 @@ String  ---> next()
 
 
 
+18 - 07 - 2024
+#### METHODS ---
+block of to perform a specific task. syntax of method is --
+SYNTAX ---
+[Access Modifier] [Modifier] [Return Type] METHOD-NAME (ARGS) {
+    ## Function/Method definition
+}
+[Access Modifier] : Public/Private/protected/default ---optional
+[Modifier] : abstract/static/final
+Return-Type: Void/Non-PrimitiveClass(class-name)/primitive(byte/short/int).
+methodName,
+ARGS: formal arguments -- optional
+
+public static void main(String[] args) {
+
+}
+
+
+
+### ARGUMENTS ---
+are the data passed to a method to perform any task. There are 2 types of arguments
+1. Formal argument
+2. Actual argument
+
+1. FORMAL ARGUMENT --
+The data/argument passed at method declaration, is known as formal argument. it is also known as parameter.
+
+AM M RT methodName(dataType var1, ...., dataType var_n) {   }
+public static void sum(int a, int b) {   }
+
+Actual Argument --
+The data/argument is passed at method calling statement
+
+formal argument[arg at method declaration] ==> parameters.
 
 
 
 
+### TYPES OF METHODS --
+1. user-defined methods
+-- if programmer declared or defined method in a class, such methods known as user-defined methods
+-- can be of two types ..
+   1. non-parametrized method
+   -- any method that does not take formal arguments to perform a task, is called -----
+      ## syntax -- AM M RT methodName () {  .. }
+   2. parametrized method
+   -- any method that takes formal arguments to perform a task, is called -----
+      ## syntax -- AM M RT methodName (..args) {  .. }
+
+   public static double test() {
+      double x = 'B' ;
+      return x ;
+   }
+
+    int i = 65 ;
+    char ch = i ;
+    -- ch--2byte int--4byte ==> explicit typecasting ==> compilation error
+    sout(ch) ;
+
+    char ch = 65 ;
+    sout(ch) ;
+    -- output --> 'A'
+
+
+2. pre-defined methods
+
+   -- can be of two types
+   1. non-parametrized
+   2. parametrized predefined methods
+
+Scanner Class methods --
+    -- non static methods (hence need to make object)
+    next()
+    nextInt()
+
+String class methods --
+    -- non static methods (hence need to make object)
+    length()
+    charAt(int index) -- parametrized
+
+Math class methods --
+    -- static
+    Math.max(int a, int b)
+    Math.min(int a, int b)
+    Math.pow(int a, int b)
+
+
+### Changing the flow of program -- CONTROL FLOW
+1. Method
+2. Conditional | decision statement
+3. Looping
+
+
+Looping -- ..
+System.out.println("Print odd numbers from 10 to 45") ;
+int x = 10 ;
+while(x <= 45) {
+    System.out.print(((x&1) == 1)?x+" ":"");
+    x++ ;
+}
+System.out.println() ;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Done....
 
 
 

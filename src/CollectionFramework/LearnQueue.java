@@ -1,8 +1,6 @@
 package CollectionFramework;
 
-import java.util.LinkedList;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 public class LearnQueue {
 
@@ -20,6 +18,13 @@ public class LearnQueue {
         System.out.println(q.peek());
         System.out.println(q);
         */
+
+        List<Integer> st = new Stack<>() ;
+        List<Integer> v = new Vector<>() ;
+
+        Set<Integer> es = new TreeSet<>() ;
+        Queue<Integer> q = new LinkedList<>() ;
+
 
 
         // Priority Queue..
